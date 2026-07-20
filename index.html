@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Mental Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="judge-note" id="judge-note"></div>
+
+      <section class="screen active" id="screen-welcome">
+        <div class="card welcome-card">
+          <p class="eyebrow">� WELCOME TO...</p>
+          <h1>The Mental Test</h1>
+          <p class="subtitle">A premium disaster with a very bad attitude.<br>Open it at your own risk</p>
+          <div class="emoji-bubble bounce">😹</div>
+          <button class="primary-btn" data-target="screen-name">🚀 LETSS GOOO</button>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-name">
+        <div class="card">
+          <div class="emoji-bubble">😤</div>
+          <h2>Judge:</h2>
+          <p class="screen-copy">Oye!!!<br>Dont smile yet!</p>
+          <p class="screen-copy">The roasting hasn't even started.<br>but first....<br>Write your name!!<br>Just making sure I'm roasting the right idiot. 😌</p>
+          <input id="player-name" type="text" maxlength="20" placeholder="Type your glorious name" />
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-welcome">⬅ Back</button>
+            <button class="primary-btn" data-action="continue" data-target="screen-loading">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-loading">
+        <div class="card">
+          <div class="loader">
+            <span></span><span></span><span></span>
+          </div>
+          <h2 id="loading-title">Searching...</h2>
+          <p id="loading-text" class="screen-copy">Searching...</p>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-name">⬅ Back</button>
+            <button class="primary-btn hidden" id="loading-next" data-target="screen-question-1">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-question-1">
+        <div class="card">
+          <p class="eyebrow">Question 1</p>
+          <h2>Which one has the biggest brain?</h2>
+          <div class="option-grid">
+            <button class="option-btn" data-target="screen-reaction-1" data-reaction="monkey">🐒 Monkey</button>
+            <button class="option-btn" data-target="screen-reaction-2" data-reaction="potato">🥔 Potato</button>
+            <button class="option-btn" data-target="screen-reaction-3" data-reaction="me">😎 Me</button>
+          </div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-loading">⬅ Back</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-1">
+        <div class="card">
+          <div class="emoji-bubble">🐒</div>
+          <h2>Interesting.</h2>
+          <p class="screen-copy">monkey?<br>Fair enough....</p>
+          <p class="screen-copy">At least it knows not to click random buttons.<br>Unlike someone...👀</p>
+          <div class="emoji-bubble small">😂😂😂</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-1">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-2">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-2">
+        <div class="card">
+          <div class="emoji-bubble">🥔</div>
+          <h2>Interesting.</h2>
+          <p class="screen-copy">Finally...<br>Someone answered honestly...<br>Self-awareness unlocked.</p>
+          <p class="screen-copy">🏆 Achievement:<br>Certified Potato Thinker. 😂</p>
+          <div class="emoji-bubble small">🤣🤣🤣</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-1">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-2">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-3">
+        <div class="card">
+          <div class="emoji-bubble">😎</div>
+          <h2>Wow.</h2>
+          <p class="screen-copy">.......<br>really?</p>
+          <p class="screen-copy">Confident level:1000%</p>
+          <p class="screen-copy">Self-awareness level: 0%</p>
+          <p class="screen-copy">Confident level:1000%</p>
+          <p class="screen-copy">I'm impressed.<br>Mostly by ur imagination</p>
+          <div class="emoji-bubble small">🤪🤪🤪</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-1">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-2">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-question-2">
+        <div class="card">
+          <p class="eyebrow">Question 2</p>
+          <h2>What do you do when someone texts you?</h2>
+          <div class="option-grid">
+            <button class="option-btn" data-target="screen-reaction-4" data-reaction="instant reply">💬 Reply instantly</button>
+            <button class="option-btn" data-target="screen-reaction-5" data-reaction="days">👻 Reply after 3 business days</button>
+            <button class="option-btn" data-target="screen-reaction-6" data-reaction="on seen">☠️ Leave them on Seen</button>
+          </div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-1">⬅ Back</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-4">
+        <div class="card">
+          <div class="emoji-bubble">💬</div>
+          <h2>Perfect.</h2>
+          <p class="screen-copy">That Fast??</p>
+          <p class="screen-copy">Damnnn...</p>
+          <p class="screen-copy">Damnnnn....</p>
+          <p class="screen-copy">At least pretend u have some hobbies!</p>
+          <p class="screen-copy">Never mind... not my business. 💅
+          <div class="emoji-bubble small">😈😈😈</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-2">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-3">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-5">
+        <div class="card">
+          <div class="emoji-bubble">👻</div>
+          <h2>Classic.</h2>
+          <p class="screen-copy">Ahhh...<br>Found the problem</p>
+          <p class="screen-copy">People dont miss you....<br>They just assume you died...</p>
+          <p class="screen-copy">Even Daraz.pk delievers faster than you!!!</p>
+          <p class="screen-copy">Congratulations! You r the final boss of dry texting.👏</p>
+          <div class="emoji-bubble small">🙏🙏🙏</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-2">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-3">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-6">
+        <div class="card">
+          <div class="emoji-bubble">☠️</div>
+          <h2>Ohhh....</h2>
+          <p class="screen-copy">So You'r THAT person!</p>
+          <p class="screen-copy">Don't worry...<br>Karma has your notification on.</p>
+          <p class="screen-copy">One day you'll send "Hey"...and get the same treatment.🥱
+          <div class="emoji-bubble small">😏😏😏</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-2">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-question-3">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-question-3">
+        <div class="card">
+          <p class="eyebrow">Question 3</p>
+          <h2>What would save this friendship fastest?</h2>
+          <div class="option-grid">
+            <button class="option-btn" data-target="screen-reaction-7" data-reaction="hug">🫶 A hug</button>
+            <button class="option-btn" data-target="screen-reaction-8" data-reaction="party">🎉 A party</button>
+            <button class="option-btn" data-target="screen-reaction-9" data-reaction="cupcake">🧁 A cupcake</button>
+          </div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-2">⬅ Back</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-7">
+        <div class="card">
+          <div class="emoji-bubble">🫶</div>
+          <h2>AWWW....</h2>
+          <p class="screen-copy">You are emotionally available in a chaotic way..</p>
+          <p class="screen-copy">That is somehow adorable.</p>
+          <p class="screen-copy">.......<br>Too bad hugs don't fix your personality. 😌</p>
+          <div class="emoji-bubble small">🥱🥱🥱</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-3">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-final">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-8">
+        <div class="card">
+          <div class="emoji-bubble">🎉</div>
+          <h2>Absolutely.</h2>
+          <p class="screen-copy">You chose celebration.</p>
+          <p class="screen-copy">A very strong plan for a very weak situation.</p>
+          <div class="emoji-bubble small">🎈🎈🎈</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-3">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-final">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-reaction-9">
+        <div class="card">
+          <div class="emoji-bubble">🧁</div>
+          <h2>Honestly?</h2>
+          <p class="screen-copy">You chose dessert and that is very brave.</p>
+          <p class="screen-copy">The friendship is now powered by frosting.</p>
+          <div class="emoji-bubble small">🧁🧁🧁</div>
+          <div class="button-row">
+            <button class="secondary-btn" data-target="screen-question-3">⬅ Back</button>
+            <button class="primary-btn" data-target="screen-final">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-final">
+        <div class="card report-card">
+          <h2>🤝 FRIENDSHIP REPORT</h2>
+          <div class="report-list">
+            <div class="report-item"><span>🤡 Drama Level</span><strong>██████████</strong></div>
+            <div class="report-item"><span>🧠 Brain Battery</span><strong>2%</strong></div>
+            <div class="report-item"><span>🍕 Pizza Addiction</span><strong>████████</strong></div>
+            <div class="report-item"><span>🎮 Button Spam Skill</span><strong>100%</strong></div>
+            <div class="report-item"><span>💤 Laziness Meter</span><strong>999%</strong></div>
+            <div class="report-item"><span>💀 Chaos Energy</span><strong>∞</strong></div>
+            <div class="report-item"><span>🤝 Friendship Strength</span><strong>90%</strong></div>
+          </div>
+          <p class="achievement-line" id="achievement-line"></p>
+          <p class="final-result">🏆 Final Result:</p>
+          <p class="quote">"You're impossible..."</p>
+          <p class="quote">"But I'd still choose you as my best friend."</p>
+          <div class="emoji-bubble">❤️</div>
+          <button class="primary-btn" data-target="screen-welcome" id="play-again">🔁 Play Again</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="confetti-layer" id="confetti-layer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
